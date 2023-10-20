@@ -9,5 +9,5 @@
     "./src/**/*.jsx",
     "./src/**/*.cjs"
   ],
-  "exclude": ["./public", "./.nuxt", "./.output", "./dist"]
+  "exclude": ["./public", "./.output", "./dist"]
 }

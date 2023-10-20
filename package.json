@@ -9,12 +9,20 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "analyze": "nuxt analyze",
-    "eslint": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs"
+    "eslint": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs",
+    "eslint:fix": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs --fix",
+    "prettier": "pnpm exec prettier . --write"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.51.0",
+    "eslint-plugin-vue": "^9.17.0",
     "nuxt": "^3.8.0",
+    "prettier": "3.0.3",
     "vue": "^3.3.4",
+    "vue-eslint-parser": "^9.3.2",
     "vue-router": "^4.2.5"
   }
 }
