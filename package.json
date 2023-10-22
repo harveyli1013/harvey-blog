@@ -9,9 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "analyze": "nuxt analyze",
-    "eslint": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs",
-    "eslint:fix": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs --fix",
-    "prettier": "pnpm exec prettier . --write"
+    "eslint": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs --ignore-path .eslintignore",
+    "eslint:fix": "npx eslint . --ext .vue,.js,.ts,.tsx,.jsx,.cjs --fix --ignore-path .eslintignore",
+    "prettier": "pnpm exec prettier . --write --ignore-path --ignore-path .eslintignore",
+    "stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,html}\" --fix --cache --cache-location node_modules/.cache/stylelint/ --ignore-path .gitignore"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -20,9 +21,11 @@
     "eslint": "^8.51.0",
     "eslint-plugin-vue": "^9.17.0",
     "nuxt": "^3.8.0",
+    "postcss": "^8.4.31",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
     "prettier": "3.0.3",
+    "stylelint": "^15.11.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-less": "^2.0.0",
