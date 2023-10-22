@@ -2,7 +2,7 @@
  * @Author: harvey —— fxli@yuansuan.cn
  * @Date: 2023-10-20 14:38:27
  * @LastEditors: harvey fxli@yuansuan.cn
- * @LastEditTime: 2023-10-20 15:53:56
+ * @LastEditTime: 2023-10-22 16:00:03
  * @Description:
  * Copyright (c) 2023 by harvey —— email: fxli@yuansuan.cn, All Rights Reserved.
  */
@@ -10,7 +10,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "src/",
-  ssr: false, // 默认为true false 则是 csr
+  ssr: true, // 默认为true false 则是 csr
+
   app: {
     head: {
       title: "blog",
@@ -39,10 +40,9 @@ export default defineNuxtConfig({
     baseURL: "/",
     rootId: "app",
   },
-  components: {
-    dirs: ["~/components"],
-  },
-  css: ["@/assets/css/global.css"],
+
+  modules: ["@element-plus/nuxt"],
+  css: ["@/assets/css/global.css", "element-plus/dist/index.css"],
   build: {},
   // debug: true,
   devServer: {
@@ -51,5 +51,23 @@ export default defineNuxtConfig({
   },
   alias: {
     "@/": "./src/",
+  },
+  typescript: {
+    typeCheck: true,
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        less: {
+          modifyVars: {
+            "@theme-colors": "#333333",
+            "@assist-colors": "#EE1B24",
+            "@white": "#FFFFFF",
+          },
+          javascriptEnabled: true,
+          // additionalData: `@import "${resolve(__dirname, 'src/assets/style/mixin.less')}";`
+        },
+      },
+    },
   },
 });

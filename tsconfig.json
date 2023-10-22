@@ -4,10 +4,9 @@
   "include": [
     "./src/**/*.vue",
     "./src/**/*.ts",
-    "./src/**/*.js",
     "./src/**/*.tsx",
-    "./src/**/*.jsx",
-    "./src/**/*.cjs"
+    "./global.d.ts",
+    "./.nuxt/types/**/*.d.ts"
   ],
-  "exclude": ["./public", "./.output", "./dist"]
+  "exclude": ["./public"]
 }
