@@ -10,6 +10,7 @@ module.exports = {
   ],
   globals: {
     definePageMeta: "readonly",
+    defineNuxtConfig: "readonly",
   },
   overrides: [
     {

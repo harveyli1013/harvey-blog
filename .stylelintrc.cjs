@@ -209,5 +209,11 @@ module.exports = {
       "unicode-bidi",
       "speak",
     ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        ignoreAtRules: ["tailwind"],
+      },
+    ],
   },
 };

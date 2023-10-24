@@ -2,13 +2,14 @@
  * @Author: harvey —— fxli@yuansuan.cn
  * @Date: 2023-10-20 14:38:27
  * @LastEditors: harvey fxli@yuansuan.cn
- * @LastEditTime: 2023-10-22 16:00:03
+ * @LastEditTime: 2023-10-24 16:09:11
  * @Description:
  * Copyright (c) 2023 by harvey —— email: fxli@yuansuan.cn, All Rights Reserved.
  */
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.NODE_ENV === "development" },
   srcDir: "src/",
   ssr: true, // 默认为true false 则是 csr
 
@@ -41,8 +42,8 @@ export default defineNuxtConfig({
     rootId: "app",
   },
 
-  modules: ["@element-plus/nuxt"],
-  css: ["@/assets/css/global.css", "element-plus/dist/index.css"],
+  modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss"],
+  css: ["@/assets/style/global.css", "element-plus/dist/index.css"],
   build: {},
   // debug: true,
   devServer: {
@@ -53,21 +54,11 @@ export default defineNuxtConfig({
     "@/": "./src/",
   },
   typescript: {
-    typeCheck: true,
+    typeCheck: process.env.NODE_ENV === "development",
   },
-  vite: {
-    css: {
-      preprocessorOptions: {
-        less: {
-          modifyVars: {
-            "@theme-colors": "#333333",
-            "@assist-colors": "#EE1B24",
-            "@white": "#FFFFFF",
-          },
-          javascriptEnabled: true,
-          // additionalData: `@import "${resolve(__dirname, 'src/assets/style/mixin.less')}";`
-        },
-      },
-    },
+  vite: {},
+  tailwindcss: {
+    configPath: "./tailwind.config.js",
+    cssPath: "@/assets/style/tailwind.css",
   },
 });
