@@ -9,8 +9,8 @@ module.exports = {
     "plugin:vue/vue3-recommended",
   ],
   globals: {
-    definePageMeta: "readonly",
-    defineNuxtConfig: "readonly",
+    // definePageMeta: "readonly",
+    // defineNuxtConfig: "readonly",
   },
   overrides: [
     {
@@ -51,13 +51,15 @@ module.exports = {
       {
         html: {
           void: "never",
-          normal: "always",
+          normal: "any",
           component: "any",
         },
         svg: "always",
         math: "always",
       },
     ],
-    "no-undef": ["warn"],
+    "no-undef": ["off"],
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/multiline-html-element-content-newline": "off",
   },
 };

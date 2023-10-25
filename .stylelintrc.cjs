@@ -4,8 +4,8 @@ module.exports = {
   extends: [
     "stylelint-config-standard",
     "stylelint-config-recommended-less",
-    "stylelint-config-standard-vue",
     "stylelint-config-prettier",
+    "stylelint-config-standard-vue",
   ],
   /* 引入插件, 用于扩展stylelint的原生rules */
   plugins: ["stylelint-order"],
@@ -33,6 +33,7 @@ module.exports = {
   ],
   /* 项目个性化的规则 */
   rules: {
+    "no-empty-source": null,
     "selector-class-pattern": null, // 选择器命名模式
     "no-descending-specificity": null, // 禁止在具有较高优先级的选择器后出现被其覆盖的较低优先级的选择器
     "selector-pseudo-element-no-unknown": [
