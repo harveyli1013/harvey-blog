@@ -1,11 +1,22 @@
 {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "stylelint.enable": true,
-    "stylelint.validate": ["css", "less", "scss", "sass", "html", "vue"],
-    "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": true
-    },
-    "css.lint.unknownAtRules": "ignore",
-  }
-  
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "less", "scss", "sass", "html", "vue"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*ui\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "ui"]
+}

@@ -2,7 +2,7 @@
  * @Author: harvey —— fxli@yuansuan.cn
  * @Date: 2023-10-20 14:38:27
  * @LastEditors: harvey fxli@yuansuan.cn
- * @LastEditTime: 2023-10-24 16:09:11
+ * @LastEditTime: 2023-10-25 13:37:27
  * @Description:
  * Copyright (c) 2023 by harvey —— email: fxli@yuansuan.cn, All Rights Reserved.
  */
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       // please note that this is an area that is likely to change
       style: [
         // <style type="text/css">:root { color: red }</style>
-        { children: ":root { color: red }" },
+        // { children: ":root { color: red }" },
       ],
       noscript: [
         // <noscript>JavaScript is required</noscript>
@@ -42,8 +42,8 @@ export default defineNuxtConfig({
     rootId: "app",
   },
 
-  modules: ["@element-plus/nuxt", "@nuxtjs/tailwindcss"],
-  css: ["@/assets/style/global.css", "element-plus/dist/index.css"],
+  modules: ["@nuxt/ui"],
+  css: ["@/assets/style/global.css"],
   build: {},
   // debug: true,
   devServer: {
@@ -59,6 +59,5 @@ export default defineNuxtConfig({
   vite: {},
   tailwindcss: {
     configPath: "./tailwind.config.js",
-    cssPath: "@/assets/style/tailwind.css",
   },
 });

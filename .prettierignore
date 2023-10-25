@@ -19,7 +19,6 @@ LICENSE
 CNAME
 /build
 /public
-.vscode
 .idea
 *.yaml
 .nuxt

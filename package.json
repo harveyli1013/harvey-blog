@@ -15,10 +15,10 @@
     "stylelint": "stylelint \"./**/*.{css,less,scss,sass,vue,html}\" --fix --cache --cache-location node_modules/.cache/stylelint/ --ignore-path .gitignore"
   },
   "devDependencies": {
-    "@egoist/tailwindcss-icons": "^1.4.0",
     "@element-plus/nuxt": "^1.0.6",
     "@iconify/types": "^2.0.0",
     "@nuxt/devtools": "latest",
+    "@types/node": "^20.8.8",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "eslint": "^8.51.0",
@@ -42,9 +42,8 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
     "@iconify/json": "^2.2.132",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxt/ui": "^2.9.0",
     "@pinia/nuxt": "^0.5.1",
-    "element-plus": "^2.4.1",
     "less": "^4.2.0",
     "pinia": "^2.1.7",
     "vue": "^3.3.6"

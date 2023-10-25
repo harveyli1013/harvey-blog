@@ -1,30 +1,33 @@
 <template>
+  <Head>
+    <Title>{{ title }}</Title>
+    <Meta name="description" :content="title" />
+    <!-- <Style type="text/css" children="body { background-color: green; }" /> -->
+  </Head>
   <section class="bg-slate-50 flex flex-row flex-wrap">
-    <div class="h-20 grow w-80 bg-teal-700">1</div>
+    <div class="h-20 content-end grow w-80 bg-teal-700">1</div>
     <div class="h-20 grow w-80 bg-orange-300">2</div>
     <div class="h-20 grow w-80 bg-sky-600">3</div>
+    <UCard :ui="ui" />
+    <UInput v-model="value" />
   </section>
 
   <section>
     <div>
-
-      <Head>
-        <Title>{{ title }}</Title>
-        <Meta name="description" :content="title" />
-        <Style type="text/css" children="body { background-color: green; }" />
-      </Head>
       <h1>{{ title }}</h1>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-
+const value = ref('')
 const title = ref('你好，世界')
 definePageMeta({
   layout: "custom",
 });
-
+const ui = /*ui*/ {
+  background: 'bg-white dark:bg-slate-900'
+}
 /* useHead({
   title: '我的应用',
   meta: [
