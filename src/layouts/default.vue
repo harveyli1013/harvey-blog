@@ -1,5 +1,7 @@
 <template>
-  <header>header</header>
-  <slot />
-  <footer>footer</footer>
+  <CommonUContainer>
+    <header>header</header>
+    <slot />
+    <footer>footer</footer>
+  </CommonUContainer>
 </template>

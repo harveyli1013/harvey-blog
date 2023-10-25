@@ -2,7 +2,7 @@
  * @Author: harvey —— fxli@yuansuan.cn
  * @Date: 2023-10-20 14:38:27
  * @LastEditors: harvey fxli@yuansuan.cn
- * @LastEditTime: 2023-10-25 13:37:27
+ * @LastEditTime: 2023-10-25 13:46:41
  * @Description:
  * Copyright (c) 2023 by harvey —— email: fxli@yuansuan.cn, All Rights Reserved.
  */
@@ -58,6 +58,6 @@ export default defineNuxtConfig({
   },
   vite: {},
   tailwindcss: {
-    configPath: "./tailwind.config.js",
+    configPath: "./tailwind.config.ts",
   },
 });
