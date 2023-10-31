@@ -42,7 +42,7 @@ module.exports = {
           max: 5,
         },
         multiline: {
-          max: 1,
+          max: 5,
         },
       },
     ],
@@ -61,5 +61,19 @@ module.exports = {
     "no-undef": ["off"],
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
+    "vue/first-attribute-linebreak": [
+      "error",
+      {
+        singleline: "ignore",
+        multiline: "ignore",
+      },
+    ],
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        singleline: "never",
+        multiline: "never",
+      },
+    ],
   },
 };

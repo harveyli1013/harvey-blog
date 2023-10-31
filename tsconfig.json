@@ -1,6 +1,11 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
-  "include": ["./src/**/*.vue", "./src/**/*.ts", "./.nuxt/types/**/*.d.ts"],
+  // "include": [
+  // "./src/**/*.vue",
+  // "./src/**/*.ts",
+  // "./.nuxt/types/**/*.d.ts",
+  // "node_modules/@types/**/*.d.ts"
+  // ],
   "exclude": ["./public"]
 }
